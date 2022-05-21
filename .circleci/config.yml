@@ -16,6 +16,9 @@ jobs: # we now have TWO jobs, so that a workflow can coordinate them!
           root: my_workspace
           paths:
             - echo-output
+      - add_ssh_keys:
+          fingerprints:
+            - "MD5:98:75:89:6e:a5:d8:69:91:e9:16:ac:d9:cc:cf:43:73"
   two: # This is our second job.
     docker: # it runs inside a docker image, the same as above.
       - image: cimg/ruby:3.0.2
